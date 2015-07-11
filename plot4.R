@@ -5,7 +5,7 @@ DS$Date2 = as.Date(DS$Date, "%d/%m/%Y")
 DS$Time2 <- strptime(paste(DS$Date, DS$Time), "%d/%m/%Y %H:%M:%S")
 DS2 <- DS[DS$Date2==as.Date("2007-02-01") | DS$Date2==as.Date("2007-02-02"),]
 png("plot4.png")
-par(mfrow = c(2, 2), mar = c(4, 4, 4, 4), oma = c(0, 0, 2, 0))
+par(mfrow = c(2, 2), mar = c(4, 4, 4, 4), oma = c(2, 2, 0, 0), cex = .75)
 plot(DS2$Time2, DS2$Global_active_power, type = "l", col = "black",
      xlab = "", ylab = "Global Active Power")
 plot(DS2$Time2, DS2$Voltage, type = "l", col = "black",
